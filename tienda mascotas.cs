@@ -19,14 +19,14 @@ public class TipoMascota
 
     {
         private int id_tipomascota = 0;
-	    private string tipomascota = "";
+	private string tipomascota = "";
         private string nombre = "";
         private string sexo = "";
-	    private int edad = 0;
+	private int edad = 0;
         private id_persona? id_persona = null;
 
         public int id_tipomascota { get => this.id_tipomascota; set => this.id_tipomascota = value; }
-	    public string tipomascota { get => this.tipomascota; set => this.tipomascota = value; }
+	public string tipomascota { get => this.tipomascota; set => this.tipomascota = value; }
         public string mascota { get => this.mascota; set => this.masota = value; }
         public string Nombre { get => this.nombre; set => this.nombre = value; }
         public string sexo { get => this.sexo; set => this.sexo = value; }
@@ -55,11 +55,13 @@ public class Servicio
     private string nombre = "";
     private double precio;
     private string estado = "";
+    private id_mascota ? id_mascota= null;	
 
     public int Id_Servicio { get => id_servicio; set => id_servicio = value; }
     public string Nombre { get => nombre; set => nombre = value; }
     public double Precio { get => precio; set => precio = value; }
     public string Estado { get => estado; set => estado = value; }
+    public id_mascota? id_mascota { get => this.id_mascota; set => this.id_mascota = value; }
 }
 
 public class MetodoDePago
@@ -78,20 +80,23 @@ public class Factura
     private DateTime fecha;
     private double iva;
     private double total;
-    private int id_persona;
-    private int cod_mascota;
-    private int id_pago;
-    private int id_servicio;
+    private id_persona? id_persona = null;
+    private id_mascota? id_mascota = null;
+    private id_pago? id_pago = null;
+    private id_servicio? id_servicio = null ;
 
+	
     public int Id_Factura { get => id_factura; set => id_factura = value; }
     public string Num_Factura { get => num_factura; set => num_factura = value; }
     public DateTime Fecha { get => fecha; set => fecha = value; }
     public double IVA { get => iva; set => iva = value; }
     public double Total { get => total; set => total = value; }
-    public int Id_Persona { get => id_persona; set => id_persona = value; }
-    public int Cód_Mascota { get => cod_mascota; set => cod_mascota = value; }
-    public int Id_Pago { get => id_pago; set => id_pago = value; }
-    public int Id_Servicio { get => id_servicio; set => id_servicio = value; }
+    public id_persona? id_persona { get => this.id_persona; set => this.id_persona = value; }
+    public id_mascota? id_mascota { get => this.id_mascota; set => this.id_mascota = value; }
+    public id_pago? id_pago { get => this.id_pago; set => this.id_pago = value; }
+    public id_servicio? id_servicio { get => this.id_servicio; set => this.id_servicio = value; }
+
+	
 }
 
 public class Program
