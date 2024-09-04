@@ -1,11 +1,12 @@
 using System;
-using System.Collections.Generic;
+
 
 public class Cliente
 {
     private int id_persona;
     private string cedula = "";
     private string nombre = "";
+    
 
     public int Id_Persona { get => id_persona; set => id_persona = value; }
     public string Cedula { get => cedula; set => cedula = value; }
