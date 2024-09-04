@@ -31,7 +31,7 @@ public class TipoMascota
         public string Nombre { get => this.nombre; set => this.nombre = value; }
         public string sexo { get => this.sexo; set => this.sexo = value; }
         public int edad { get => this.edad; set => this.edad = value; }
-        public id_persona? id_persona { get => this.id_persona; set => this.id_persona = value; }sfgdfbzzg
+        public id_persona? id_persona { get => this.id_persona; set => this.id_persona = value; }
     }
 
 
