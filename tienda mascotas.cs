@@ -80,10 +80,10 @@ public class Factura
     private DateTime fecha;
     private double iva;
     private double total;
-    private id_persona? id_persona = null;
-    private id_mascota? id_mascota = null;
-    private id_pago? id_pago = null;
-    private id_servicio? id_servicio = null ;
+    private Cliente? Cliente = null;
+    private Mascota? Mascota = null;
+    private MetodoDePago? MetodoDePago = null;
+    private Servicio? Servicio = null ;
 
 	
     public int Id_Factura { get => id_factura; set => id_factura = value; }
@@ -97,100 +97,4 @@ public class Factura
     public Servicio? Servicio { get => this.Servicio; set => this.Servicio = value; }
 
 	
-}
-
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        // Crear algunos métodos de pago
-        MetodoDePago pago1 = new MetodoDePago { Id_Pago = 1, Nombre = "Efectivo" };
-        MetodoDePago pago2 = new MetodoDePago { Id_Pago = 2, Nombre = "Tarjeta" };
-
-        // Crear algunas mascotas
-        Mascota mascota1 = new Mascota { Id_Mascota = 1, CodigoMascota = "DP307", Nombre = "Perro" };
-        Mascota mascota2 = new Mascota { Id_Mascota = 2, CodigoMascota = "NE428", Nombre = "Gato" };
-        Mascota mascota3 = new Mascota { Id_Mascota = 3, CodigoMascota = "SA589", Nombre = "Ave" };
-
-        // Crear algunos clientes
-        Cliente cliente1 = new Cliente { Id_Persona = 1, Cedula = "203", Nombre = "Sara" };
-        Cliente cliente2 = new Cliente { Id_Persona = 2, Cedula = "407", Nombre = "Julian" };
-        Cliente cliente3 = new Cliente { Id_Persona = 3, Cedula = "584", Nombre = "Jeronimo" };
-
-        // Crear algunos servicios
-        Servicio servicio1 = new Servicio { Id_Servicio = 1, Nombre = "Alquiler", Precio = 60000, Estado = "Proceso" };
-        Servicio servicio2 = new Servicio { Id_Servicio = 2, Nombre = "Inyección", Precio = 40000, Estado = "Finalizado" };
-        Servicio servicio3 = new Servicio { Id_Servicio = 3, Nombre = "Revisión", Precio = 120000, Estado = "Proceso" };
-        Servicio servicio4 = new Servicio { Id_Servicio = 4, Nombre = "Desparasitacion", Precio = 90000, Estado = "Finalizado" };
-
-        // Crear facturas basadas en la tabla de la imagen
-        List<Factura> facturas = new List<Factura>
-        {
-            new Factura
-            {
-                Id_Factura = 1,
-                Num_Factura = "A0010",
-                Fecha = new DateTime(2024, 5, 10),
-                IVA = 6000,
-                Total = 66000,
-                Id_Persona = cliente1.Id_Persona,
-                Cód_Mascota = mascota1.Id_Mascota,
-                Id_Pago = pago1.Id_Pago,
-                Id_Servicio = servicio1.Id_Servicio
-            },
-            new Factura
-            {
-                Id_Factura = 2,
-                Num_Factura = "A0011",
-                Fecha = new DateTime(2024, 3, 12),
-                IVA = 0,
-                Total = 40000,
-                Id_Persona = cliente2.Id_Persona,
-                Cód_Mascota = mascota2.Id_Mascota,
-                Id_Pago = pago2.Id_Pago,
-                Id_Servicio = servicio2.Id_Servicio
-            },
-            new Factura
-            {
-                Id_Factura = 3,
-                Num_Factura = "A0012",
-                Fecha = new DateTime(2023, 8, 25),
-                IVA = 12000,
-                Total = 132000,
-                Id_Persona = cliente3.Id_Persona,
-                Cód_Mascota = mascota3.Id_Mascota,
-                Id_Pago = pago1.Id_Pago,
-                Id_Servicio = servicio3.Id_Servicio
-            },
-            new Factura
-            {
-                Id_Factura = 4,
-                Num_Factura = "A0010",
-                Fecha = new DateTime(2024, 5, 11),
-                IVA = 9000,
-                Total = 99000,
-                Id_Persona = cliente1.Id_Persona,
-                Cód_Mascota = mascota1.Id_Mascota,
-                Id_Pago = pago2.Id_Pago,
-                Id_Servicio = servicio4.Id_Servicio
-            }
-        };
-
-        // Mostrar las facturas generadas
-        foreach (var factura in facturas)
-        {
-            var cliente = factura.Id_Persona == 1 ? cliente1 : factura.Id_Persona == 2 ? cliente2 : cliente3;
-            var mascota = factura.Cód_Mascota == 1 ? mascota1 : factura.Cód_Mascota == 2 ? mascota2 : mascota3;
-            var servicio = factura.Id_Servicio == 1 ? servicio1 : factura.Id_Servicio == 2 ? servicio2 : factura.Id_Servicio == 3 ? servicio3 : servicio4;
-            var metodoPago = factura.Id_Pago == 1 ? pago1 : pago2;
-
-            Console.WriteLine($"Factura: {factura.Num_Factura}");
-            Console.WriteLine($"Fecha: {factura.Fecha.ToShortDateString()}");
-            Console.WriteLine($"Cliente: {cliente.Nombre} (Cédula: {cliente.Cedula})");
-            Console.WriteLine($"Mascota: {mascota.Nombre} (Código: {mascota.CodigoMascota})");
-            Console.WriteLine($"Servicio: {servicio.Nombre}, Estado: {servicio.Estado}, Precio: {servicio.Precio}");
-            Console.WriteLine($"Método de Pago: {metodoPago.Nombre}");
-            Console.WriteLine($"Total con IVA: {factura.Total}\n");
-        }
-    }
 }
