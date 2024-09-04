@@ -6,7 +6,7 @@ public class Cliente
     private int id_persona= 0;
     private string cedula = "";
     private string nombre = "";
-    private Mascota? 
+    private Mascota? mascota = null; 
     
 
     public int Id_Persona { get => id_persona; set => id_persona = value; }
@@ -15,15 +15,38 @@ public class Cliente
     public Mascota? Mascota { get => this.mascota; set => this.mascota = value; }
 }
 
+public class TipoMascota
+
+    {
+        private int id_tipomascota = 0;
+	    private string tipomascota = "";
+        private string nombre = "";
+        private string sexo = "";
+	    private int edad = 0;
+        private id_persona? id_persona = null;
+
+        public int id_tipomascota { get => this.id_tipomascota; set => this.id_tipomascota = value; }
+	    public string tipomascota { get => this.tipomascota; set => this.tipomascota = value; }
+        public string mascota { get => this.mascota; set => this.masota = value; }
+        public string Nombre { get => this.nombre; set => this.nombre = value; }
+        public string sexo { get => this.sexo; set => this.sexo = value; }
+        public int edad { get => this.edad; set => this.edad = value; }
+        public id_persona? id_persona { get => this.id_persona; set => this.id_persona = value; }sfgdfbzzg
+    }
+
+
 public class Mascota
 {
     private int id_mascota=0;
     private string codigoMascota = "";
     private string nombre = "";
+    private TipoMascota? tipomascota = null; 
+    
 
     public int Id_Mascota { get => id_mascota; set => id_mascota = value; }
     public string CodigoMascota { get => codigoMascota; set => codigoMascota = value; }
     public string Nombre { get => nombre; set => nombre = value; }
+    public TipoMascota? TipoMascota { get => this.tipomascota; set => this.tipomascota = value; }
 }
 
 public class Servicio
