@@ -88,35 +88,5 @@ public class Facturas
     public MetodosDePago? MetodoDePago { get => metodoDePago; set => metodoDePago = value; }
     public Servicios? Servicio { get => servicio; set => servicio = value; }
 }
-using System;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Aquí puedes instanciar tus clases y probarlas
-        Cliente cliente = new Cliente();
-        cliente.Nombre = "Juan Pérez";
-        cliente.Cedula = "1234567890";
-        
-        Mascota mascota = new Mascota();
-        mascota.Nombre = "Firulais";
-        cliente.Mascota = mascota;
-        
-        Servicio servicio = new Servicio();
-        servicio.Nombre = "Baño";
-        servicio.Precio = 20.0;
 
-        MetodoDePago metodoDePago = new MetodoDePago();
-        metodoDePago.Nombre = "Tarjeta";
-
-        Factura factura = new Factura();
-        factura.Cliente = cliente;
-        factura.Mascota = mascota;
-        factura.Servicio = servicio;
-        factura.MetodoDePago = metodoDePago;
-        factura.Total = servicio.Precio;
-        
-        Console.WriteLine($"Factura para {cliente.Nombre}, Mascota: {mascota.Nombre}, Servicio: {servicio.Nombre}, Total: {factura.Total}");
-    }
-}
