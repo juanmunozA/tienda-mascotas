@@ -2,10 +2,10 @@ using System;
 
 public class Clientes
 {
-    private int idCliente = 0; // Campo para identificar al cliente
+    private int idCliente = 0; 
     private string cedula = "";
     private string nombre = "";
-    private Mascotas? mascotas = null; // Referencia a la colección de mascotas
+    private Mascotas? mascotas = null; 
 
     public int IdCliente { get => idCliente; set => idCliente = value; }
     public string Cedula { get => cedula; set => cedula = value; }
@@ -15,12 +15,12 @@ public class Clientes
 
 public class TiposMascota
 {
-    private int idTipoMascota = 0; // Campo para identificar el tipo de mascota
+    private int idTipoMascota = 0; 
     private string tipoMascota = "";
     private string nombre = "";
     private string sexo = "";
     private int edad = 0;
-    private Clientes? cliente = null; // Referencia a la colección de clientes
+    private Clientes? cliente = null; 
 
     public int IdTipoMascota { get => idTipoMascota; set => idTipoMascota = value; }
     public string TipoMascota { get => tipoMascota; set => tipoMascota = value; }
@@ -32,10 +32,10 @@ public class TiposMascota
 
 public class Mascotas
 {
-    private int idMascota = 0; // Campo para identificar a la mascota
+    private int idMascota = 0;
     private string codigoMascota = "";
     private string nombre = "";
-    private TiposMascota? tipoMascota = null; // Referencia al tipo de mascota
+    private TiposMascota? tipoMascota = null;
 
     public int IdMascota { get => idMascota; set => idMascota = value; }
     public string CodigoMascota { get => codigoMascota; set => codigoMascota = value; }
@@ -45,11 +45,11 @@ public class Mascotas
 
 public class Servicios
 {
-    private int idServicio = 0; // Campo para identificar al servicio
+    private int idServicio = 0; 
     private string nombre = "";
     private double precio;
     private string estado = "";
-    private Mascotas? mascotas = null; // Referencia a la colección de mascotas
+    private Mascotas? mascotas = null; 
 
     public int IdServicio { get => idServicio; set => idServicio = value; }
     public string Nombre { get => nombre; set => nombre = value; }
@@ -60,7 +60,7 @@ public class Servicios
 
 public class MetodosDePago
 {
-    private int idPago = 0; // Campo para identificar el método de pago
+    private int idPago = 0; 
     private string nombre = "";
 
     public int IdPago { get => idPago; set => idPago = value; }
@@ -69,7 +69,7 @@ public class MetodosDePago
 
 public class Facturas
 {
-    private int idFactura = 0; // Campo para identificar la factura
+    private int idFactura = 0; 
     private string numFactura = "";
     private DateTime fecha;
     private double iva;
