@@ -91,10 +91,10 @@ public class Factura
     public DateTime Fecha { get => fecha; set => fecha = value; }
     public double IVA { get => iva; set => iva = value; }
     public double Total { get => total; set => total = value; }
-    public id_persona? id_persona { get => this.id_persona; set => this.id_persona = value; }
-    public id_mascota? id_mascota { get => this.id_mascota; set => this.id_mascota = value; }
-    public id_pago? id_pago { get => this.id_pago; set => this.id_pago = value; }
-    public id_servicio? id_servicio { get => this.id_servicio; set => this.id_servicio = value; }
+    public Cliente? Cliente { get => this.Cliente; set => this.Cliente = value; }
+    public Mascota? Mascota { get => this.Mascota; set => this.Mascota = value; }
+    public MetodoDePago? MetodoDePago { get => this.MetodoDePago; set => this.MetodoDePago = value; }
+    public Servicio? Servicio { get => this.Servicio; set => this.Servicio = value; }
 
 	
 }
