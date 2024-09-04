@@ -3,19 +3,21 @@ using System;
 
 public class Cliente
 {
-    private int id_persona;
+    private int id_persona= 0;
     private string cedula = "";
     private string nombre = "";
+    private Mascota? 
     
 
     public int Id_Persona { get => id_persona; set => id_persona = value; }
     public string Cedula { get => cedula; set => cedula = value; }
     public string Nombre { get => nombre; set => nombre = value; }
+    public Mascota? Mascota { get => this.mascota; set => this.mascota = value; }
 }
 
 public class Mascota
 {
-    private int id_mascota;
+    private int id_mascota=0;
     private string codigoMascota = "";
     private string nombre = "";
 
@@ -26,7 +28,7 @@ public class Mascota
 
 public class Servicio
 {
-    private int id_servicio;
+    private int id_servicio=0;
     private string nombre = "";
     private double precio;
     private string estado = "";
@@ -39,7 +41,7 @@ public class Servicio
 
 public class MetodoDePago
 {
-    private int id_pago;
+    private int id_pago=0;
     private string nombre = "";
 
     public int Id_Pago { get => id_pago; set => id_pago = value; }
@@ -48,7 +50,7 @@ public class MetodoDePago
 
 public class Factura
 {
-    private int id_factura;
+    private int id_factura=0;
     private string num_factura = "";
     private DateTime fecha;
     private double iva;
