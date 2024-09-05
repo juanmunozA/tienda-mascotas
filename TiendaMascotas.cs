@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 
 public class Clientes
 {
     private int idCliente = 0;
     private string cedula = "";
     private string nombre = "";
-    private Mascotas? mascotas = null;
+    private Mascotas? mascota = null;
 
     public int IdCliente { get => idCliente; set => idCliente = value; }
     public string Cedula { get => cedula; set => cedula = value; }
     public string Nombre { get => nombre; set => nombre = value; }
-    public Mascotas? Mascotas { get => mascotas; set => mascotas = value; }
+    public Mascotas? Mascota { get => mascota; set => mascota = value; }
 }
 
 public class TiposMascota
@@ -47,14 +47,15 @@ public class Servicios
 {
     private int idServicio = 0;
     private string nombre = "";
-    private double precio;
+    private double precio = 0.0; 
     private string estado = "";
-    private Mascotas? mascotas = null;
+    private Mascotas? mascota = null;
+
     public int IdServicio { get => idServicio; set => idServicio = value; }
     public string Nombre { get => nombre; set => nombre = value; }
     public double Precio { get => precio; set => precio = value; }
     public string Estado { get => estado; set => estado = value; }
-    public Mascotas? Mascotas { get => mascotas; set => mascotas = value; }
+    public Mascotas? Mascota { get => mascota; set => mascota = value; }
 }
 
 public class MetodosDePago
@@ -74,7 +75,7 @@ public class Facturas
     private double iva;
     private double total;
     private Clientes? cliente = null;
-    private Mascotas? mascotas = null;
+    private Mascotas? mascota = null;
     private MetodosDePago? metodoDePago = null;
     private Servicios? servicio = null;
 
@@ -84,8 +85,7 @@ public class Facturas
     public double IVA { get => iva; set => iva = value; }
     public double Total { get => total; set => total = value; }
     public Clientes? Cliente { get => cliente; set => cliente = value; }
-    public Mascotas? Mascotas { get => mascotas; set => mascotas = value; }
+    public Mascotas? Mascota { get => mascota; set => mascota = value; }
     public MetodosDePago? MetodoDePago { get => metodoDePago; set => metodoDePago = value; }
     public Servicios? Servicio { get => servicio; set => servicio = value; }
-   
 }
