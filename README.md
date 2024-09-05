@@ -10,6 +10,6 @@ Juan José Muñoz Agudelo
 
 
 
-profesor buenas noches, al hacer el commit se suben demadiados archivos y dependencias las cuales no sabemos "comprimirlas" o reducirlas.
+Profesor buenas noches, al hacer el commit se suben demasiados archivos y dependencias las cuales no sabemos "comprimirlas" o reducirlas.
 
-Al momento de clonarlo pedimos por favor que abra la carpeta Tienda Mascotas.sln, y de ahi procesa a depurarlo/ejecutarlo, muchas gracias.
+Al momento de clonarlo le pedimos que abra la carpeta Tienda Mascotas.sln, de ahi procesa a depurarlo/ejecutarlo, muchas gracias.
